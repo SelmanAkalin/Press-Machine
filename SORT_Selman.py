@@ -92,7 +92,7 @@ def interpret_second_output(output):
 if __name__ == "__main__":
     # Resmi yükle ve ön işleme yap
     mot_tracker = Sort()
-    folder_path = r"C:\Users\LENOVO\Desktop\Staj\akpres_SORT\sort\test_images"
+    folder_path = r"path_here"
 
     for file_name in os.listdir(folder_path):
         image_path = os.path.join(folder_path, file_name)
@@ -101,7 +101,7 @@ if __name__ == "__main__":
         input_data = preprocess_image(image_path)
 
         # İlk modeli çalıştır.
-        model1_path = r"C:\Users\LENOVO\Desktop\Staj\akpres_SORT\sort\akpres_det.onnx"  # İlk modelin yolunu buraya yazın
+        model1_path = r".onxx_path_here"  # İlk modelin yolunu buraya yazın
         output1 = run_model(model1_path, input_data)
         predicted_class, confidence = interpret_output(output1)
 
